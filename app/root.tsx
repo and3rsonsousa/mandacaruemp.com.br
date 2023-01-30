@@ -8,8 +8,16 @@ import {
 	ScrollRestoration,
 } from "@remix-run/react";
 import styles from "./app.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+export const links: LinksFunction = () => [
+	{ rel: "stylesheet", href: styles },
+	{
+		rel: "icon",
+		href: "/ico.png",
+	},
+];
 
 export const meta: MetaFunction = () => ({
 	charset: "utf-8",
@@ -25,7 +33,9 @@ export default function App() {
 				<Links />
 			</head>
 			<body>
+				<Header />
 				<Outlet />
+				<Footer />
 				<ScrollRestoration />
 				<Scripts />
 				<LiveReload />
