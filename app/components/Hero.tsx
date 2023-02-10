@@ -1,7 +1,14 @@
+import { motion } from "framer-motion";
+
 export default function Hero() {
 	return (
 		<div className="hero min-h-[90vh] grid bg-cover bg-top place-items-center p-8 relative">
-			<div className="w-full">
+			<motion.div
+				className="w-full"
+				initial={{ opacity: 0, y: "10%" }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 1 }}
+			>
 				<div className="text-5xl font-bold text-white">
 					Construindo
 					<br />o futuro
@@ -12,7 +19,7 @@ export default function Hero() {
 						Fale conosco
 					</a>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 }

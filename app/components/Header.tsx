@@ -1,4 +1,5 @@
 import { Link } from "@remix-run/react";
+import { motion } from "framer-motion";
 import { useEffect } from "react";
 
 export default function Header() {
@@ -18,7 +19,11 @@ export default function Header() {
 	}, []);
 
 	return (
-		<div className="header p-2 fixed top-0 right-0 left-0 z-10">
+		<motion.div
+			className="header p-2 fixed top-0 right-0 left-0 z-10"
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1, transition: { delay: 0.5 } }}
+		>
 			<div className="container mx-auto flex items-center justify-between">
 				<Link to="/">
 					<img
@@ -42,6 +47,6 @@ export default function Header() {
 					</Link>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
