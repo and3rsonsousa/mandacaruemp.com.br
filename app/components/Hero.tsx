@@ -8,7 +8,7 @@ export default function Hero() {
 				</div>
 				<div className="my-4 text-white">Segunda frase</div>
 				<div>
-					<a href="/" className="button button-large">
+					<a href="/fale-conosco" className="button button-large">
 						Fale conosco
 					</a>
 				</div>

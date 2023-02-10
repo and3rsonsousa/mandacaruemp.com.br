@@ -2,19 +2,19 @@ import Hero from "~/components/Hero";
 
 export default function Home() {
 	return (
-		<div>
+		<>
 			<Hero />
 			<WhoWeAre />
 			<Obras />
 			<Map />
 			<Contato />
-		</div>
+		</>
 	);
 }
 
 function WhoWeAre() {
 	return (
-		<div className="container mx-auto isolate -mt-24">
+		<div className="container mx-auto relative -mt-24">
 			<div className="bg-brand text-brand-200 mx-24 p-8 rounded-2xl">
 				<div className=" gap-8 grid grid-cols-3">
 					<div>
@@ -52,7 +52,7 @@ function WhoWeAre() {
 				</div>
 				<div className="font-medium text-center border-t border-brand-800 w-1/2 mx-auto pt-8 mt-8">
 					Saiba mais sobre a nossa empresa{" "}
-					<a href="/" className="underline font-semibold">
+					<a href="/a-empresa" className="underline font-semibold">
 						aqui
 					</a>
 					.
@@ -108,7 +108,7 @@ function Obras() {
 			</div>
 			<div className="font-medium text-center mx-auto mt-8">
 				Veja todos os nossos projetos{" "}
-				<a href="/" className="underline font-semibold">
+				<a href="/nossos-projetos" className="underline font-semibold">
 					aqui
 				</a>
 				.

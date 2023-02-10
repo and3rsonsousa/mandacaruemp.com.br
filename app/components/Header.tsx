@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import { useEffect } from "react";
 
 export default function Header() {
@@ -19,26 +20,26 @@ export default function Header() {
 	return (
 		<div className="header p-2 fixed top-0 right-0 left-0 z-10">
 			<div className="container mx-auto flex items-center justify-between">
-				<div>
+				<Link to="/">
 					<img
 						src="/logo.png"
 						alt="Mandacaru Empreendimentos"
-						className="h-12 transition-all logo-main"
+						className="logo-main"
 					/>
 					<img
 						src="/logo-white.png"
 						alt="Mandacaru Empreendimentos"
-						className="h-12 transition-all logo-white"
+						className="logo-white"
 					/>
-				</div>
+				</Link>
 				<div className=" menu flex gap-2">
-					<a href="/">Home</a>
-					<a href="/">A empresa</a>
-					<a href="/">O que fazemos</a>
-					<a href="/">Nossos Projetos</a>
-					<a href="/" className="feature">
+					<Link to="/">Home</Link>
+					<Link to="/a-empresa">A empresa</Link>
+					<Link to="/o-que-fazemos">O que fazemos</Link>
+					<Link to="/nossos-projetos">Nossos Projetos</Link>
+					<Link to="/fale-conosco" className="feature">
 						Fale Conosco
-					</a>
+					</Link>
 				</div>
 			</div>
 		</div>

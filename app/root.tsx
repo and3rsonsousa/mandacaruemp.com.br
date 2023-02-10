@@ -3,13 +3,14 @@ import {
 	Links,
 	LiveReload,
 	Meta,
-	Outlet,
 	Scripts,
 	ScrollRestoration,
+	useLocation,
+	useOutlet,
 } from "@remix-run/react";
+import { AnimatePresence, motion } from "framer-motion";
 import styles from "./app.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Layout from "./components/Layout";
 
 export const links: LinksFunction = () => [
 	{ rel: "stylesheet", href: styles },
@@ -26,6 +27,10 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function App() {
+	const outlet = useOutlet();
+	const location = useLocation();
+
+	if (!outlet) return null;
 	return (
 		<html lang="pt-br">
 			<head>
@@ -33,9 +38,37 @@ export default function App() {
 				<Links />
 			</head>
 			<body>
-				<Header />
-				<Outlet />
-				<Footer />
+				<AnimatePresence mode="wait">
+					<motion.div
+						key={location.pathname}
+						transition={{ duration: 0.5 }}
+						initial={{ opacity: 0, scale: 1.05 }}
+						animate={{
+							opacity: 1,
+							scale: 1,
+						}}
+						exit={{
+							opacity: 0,
+							scale: 0.95,
+						}}
+						style={{ originY: 0 }}
+					>
+						<Layout>{outlet}</Layout>
+
+						{/* <motion.div
+								className="bg-accent fixed top-0 left-0 bottom-0 right-0 z-[1000]"
+								transition={{ duration: 1 }}
+								initial={{ scaleX: 1 }}
+								animate={{
+									scaleX: 0,
+								}}
+								exit={{
+									scaleX: 1,
+								}}
+								style={{ originX: isPresent ? 0 : 1 }}
+							/> */}
+					</motion.div>
+				</AnimatePresence>
 				<ScrollRestoration />
 				<Scripts />
 				<LiveReload />
