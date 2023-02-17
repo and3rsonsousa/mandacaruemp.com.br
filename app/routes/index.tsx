@@ -1,4 +1,5 @@
-import Hero from "~/components/Hero";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export default function Home() {
 	return (
@@ -9,6 +10,44 @@ export default function Home() {
 			<Map />
 			<Contato />
 		</>
+	);
+}
+
+function Hero() {
+	const ref = useRef(null);
+	const { scrollYProgress } = useScroll({
+		target: ref,
+		offset: ["start start", "end start"],
+	});
+
+	const y = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+	return (
+		<motion.div
+			ref={ref}
+			className="hero min-h-[90vh] grid bg-cover bg-top place-items-center p-8 relative"
+			style={{ backgroundPositionY: y }}
+		>
+			<motion.div
+				className="w-full text-center mt-80"
+				initial={{ opacity: 0, y: "10%" }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 1 }}
+			>
+				<div className="text-5xl font-bold text-white">
+					Construindo
+					<br />o futuro
+				</div>
+				<div className="my-4 text-white">
+					Sempre com a preocupação de fazer com qualidade e cumprir
+					prazos de entrega, desde sua fundação.
+				</div>
+				<div>
+					<a href="/fale-conosco" className="button button-large">
+						Fale conosco
+					</a>
+				</div>
+			</motion.div>
+		</motion.div>
 	);
 }
 

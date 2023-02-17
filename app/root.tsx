@@ -9,7 +9,7 @@ import {
 	useOutlet,
 } from "@remix-run/react";
 import { AnimatePresence, motion } from "framer-motion";
-import styles from "./app.css";
+import styles from "./tailwind.css";
 import Layout from "./components/Layout";
 
 export const links: LinksFunction = () => [

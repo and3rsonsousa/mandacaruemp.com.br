@@ -37,7 +37,7 @@ export default function Header() {
 						className="logo-white"
 					/>
 				</Link>
-				<div className=" menu flex gap-2">
+				<div className="hidden menu lg:flex gap-2">
 					<Link to="/">Home</Link>
 					<Link to="/a-empresa">A empresa</Link>
 					<Link to="/o-que-fazemos">O que fazemos</Link>
