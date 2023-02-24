@@ -1,4 +1,12 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import {
+	HardHat,
+	Instagram,
+	Leaf,
+	MapPin,
+	Phone,
+	ToyBrick,
+} from "lucide-react";
 import { useRef } from "react";
 
 export default function Home() {
@@ -20,7 +28,7 @@ function Hero() {
 		offset: ["start start", "end start"],
 	});
 
-	const y = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
+	const y = useTransform(scrollYProgress, [0, 1], ["0", "300px"]);
 	return (
 		<motion.div
 			ref={ref}
@@ -37,7 +45,7 @@ function Hero() {
 					Construindo
 					<br />o futuro
 				</div>
-				<div className="my-4 text-white">
+				<div className="my-4 text-white max-w-md mx-auto">
 					Sempre com a preocupação de fazer com qualidade e cumprir
 					prazos de entrega, desde sua fundação.
 				</div>
@@ -53,40 +61,29 @@ function Hero() {
 
 function WhoWeAre() {
 	return (
-		<div className="container mx-auto relative -mt-24">
-			<div className="bg-brand text-brand-200 mx-24 p-8 rounded-2xl">
+		<div className="container mx-auto relative -mt-12">
+			<div className="bg-brand text-brand-200 text-center mx-24 p-8 rounded-2xl">
 				<div className=" gap-8 grid grid-cols-3">
 					<div>
+						<HardHat className="h-16 w-16 mx-auto mb-4" />
 						<h2 className="mb-2 text-white text-2xl font-bold tracking-tight">
-							O que fazemos
+							Equipe de profissionais com larga experiência na
+							construção civil.
 						</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Quae ipsa consectetur aliquid totam doloremque
-							laborum minima ducimus ad natus harum, voluptas
-							maiores. Ipsam, illo.
-						</p>
 					</div>
 					<div>
+						<ToyBrick className="h-16 w-16 mx-auto mb-4" />
 						<h2 className="mb-2 text-white text-2xl font-bold tracking-tight">
-							Como fazemos
+							Integramos funcionalidade e tecnologia, produzindo
+							conforto habitacional e qualidade de vida.
 						</h2>
-						<p>
-							Lorem, ipsum dolor sit amet consectetur adipisicing
-							elit. Ut, sunt. Corporis, quae amet. Veritatis
-							repudiandae a eos.
-						</p>
 					</div>
 					<div>
+						<Leaf className="h-16 w-16 mx-auto mb-4" />
 						<h2 className="mb-2 text-white text-2xl font-bold tracking-tight">
-							Porque fazemos
+							Cuidado e atenção com o meio ambiente estão sempre
+							presente nos empreendimentos.
 						</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Aliquid unde autem distinctio aliquam aperiam
-							corporis odit neque sequi quo praesentium quidem
-							odio aut, a nam et iure mollitia, dicta cum?
-						</p>
 					</div>
 				</div>
 				<div className="font-medium text-center border-t border-brand-800 w-1/2 mx-auto pt-8 mt-8">
@@ -107,9 +104,15 @@ function Obras() {
 			<div className="font-bold text-5xl text-center px-8 py-16">
 				Nós que fizemos
 			</div>
-			<div className=" mb-16 -mt-8">
+			<div className="mb-16 -mt-8">
 				<img src="/ico.png" alt="Mandacaru" className="mx-auto h-12" />
 			</div>
+			<div>
+				<div className="text-center max-w-xs mx-auto bg-brand-100 rounded-xl p-4">
+					Em breve
+				</div>
+			</div>
+			{/* 			
 			<div className="grid grid-cols-2 gap-16 px-8">
 				{[1, 2].map((item) => {
 					return (
@@ -151,7 +154,7 @@ function Obras() {
 					aqui
 				</a>
 				.
-			</div>
+			</div> */}
 		</div>
 	);
 }
@@ -162,46 +165,61 @@ function Map() {
 			<div className="font-bold text-5xl text-center px-8 py-16">
 				Veja como é fácil nos encontrar
 			</div>
-			<img
-				src="/map.webp"
-				alt="Mapa"
-				className="h-[50vh] object-cover w-full"
-			/>
+			<iframe
+				title="Mapa"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1539.2918149896334!2d-40.33160570954907!3d-3.705024656658863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7eac795167896fb%3A0xffb93e9b3deba2e3!2sMandacar%C3%BA%20Empreendimentos!5e0!3m2!1sen!2sbr!4v1677208513631!5m2!1sen!2sbr"
+				width="600"
+				height="450"
+				style={{ border: 0, width: "100vw" }}
+				allowFullScreen={false}
+				loading="lazy"
+				referrerPolicy="no-referrer-when-downgrade"
+			></iframe>
 		</div>
 	);
 }
 
 function Contato() {
 	return (
-		<div className="bg-brand">
-			<div className="container px-8 py-16 text-brand-200">
-				<h3 className="text-3xl text-white font-semibold">
-					Fale conosco
-				</h3>
-				<div className="mt-2 grid grid-cols-3 gap-8">
+		<div className="bg-accent">
+			<div className="container max-w-4xl mx-auto px-8 py-8 text-accent-200">
+				<div className="font-bold text-white text-5xl text-center px-8 py-16">
+					Vamos conversar?
+				</div>
+
+				<div className="mt-2 text-center grid grid-cols-3 gap-8">
 					<div>
+						<MapPin className="w-8 h-8 mx-auto mb-4" />
 						<h4 className="text-white text-xl font-semibold">
 							Endereço
 						</h4>
 						<div className="text-sm">
-							Lorem ipsum, dolor sit amet consectetur adipisicing.{" "}
+							Rua Caetano Figueiredo, 1039
 							<br />
-							Lorem, ipsum.
+							COHAB II - Sobral
 						</div>
+					</div>
+					<div>
+						<Phone className="w-8 h-8 mx-auto mb-4" />
 						<h4 className="text-white text-xl font-semibold mt-2">
 							Telefone
 						</h4>
-						<div className="text-sm">(88) 0000-0000</div>
+						<div className="text-sm">(88) 9902-9372</div>
 					</div>
 					<div>
-						<h4 className="text-white text-xl font-semibold">
-							WhatsApp
-						</h4>
-						<div className="text-sm">(88) 00000-0000</div>
+						<Instagram className="w-8 h-8 mx-auto mb-4" />
 						<h4 className="text-white text-xl font-semibold mt-2">
-							Email
+							Instagram
 						</h4>
-						<div className="text-sm">email@provedor.com</div>
+						<div className="text-sm">
+							<a
+								href="https://instagram.com/mandacaruemp"
+								target="_blank"
+								rel="noreferrer"
+							>
+								@mandacaruemp
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

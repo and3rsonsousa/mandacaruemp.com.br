@@ -41,7 +41,8 @@ export default function Header() {
 					<Link to="/">Home</Link>
 					<Link to="/a-empresa">A empresa</Link>
 					<Link to="/o-que-fazemos">O que fazemos</Link>
-					<Link to="/nossos-projetos">Nossos Projetos</Link>
+					<Link to="/obras">Obras</Link>
+					<Link to="/trabalhe-conosco">Trabalhe Conosco</Link>
 					<Link to="/fale-conosco" className="feature">
 						Fale Conosco
 					</Link>
