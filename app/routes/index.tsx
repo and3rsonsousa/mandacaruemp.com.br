@@ -63,30 +63,30 @@ function WhoWeAre() {
 	return (
 		<div className="container mx-auto relative -mt-12">
 			<div className="bg-brand text-brand-200 text-center mx-24 p-8 rounded-2xl">
-				<div className=" gap-8 grid grid-cols-3">
+				<div className="gap-8 grid md:grid-cols-3">
 					<div>
 						<HardHat className="h-16 w-16 mx-auto mb-4" />
-						<h2 className="mb-2 text-white text-2xl font-bold tracking-tight">
+						<h2 className="mb-2 text-white lg:text-2xl font-bold tracking-tight">
 							Equipe de profissionais com larga experiência na
 							construção civil.
 						</h2>
 					</div>
 					<div>
 						<ToyBrick className="h-16 w-16 mx-auto mb-4" />
-						<h2 className="mb-2 text-white text-2xl font-bold tracking-tight">
+						<h2 className="mb-2 text-white lg:text-2xl font-bold tracking-tight">
 							Integramos funcionalidade e tecnologia, produzindo
 							conforto habitacional e qualidade de vida.
 						</h2>
 					</div>
 					<div>
 						<Leaf className="h-16 w-16 mx-auto mb-4" />
-						<h2 className="mb-2 text-white text-2xl font-bold tracking-tight">
+						<h2 className="mb-2 text-white lg:text-2xl font-bold tracking-tight">
 							Cuidado e atenção com o meio ambiente estão sempre
 							presente nos empreendimentos.
 						</h2>
 					</div>
 				</div>
-				<div className="font-medium text-center border-t border-brand-800 w-1/2 mx-auto pt-8 mt-8">
+				<div className="font-medium text-center border-t border-brand-800 w-2/3 lg:w-1/2 mx-auto pt-8 mt-8">
 					Saiba mais sobre a nossa empresa{" "}
 					<a href="/a-empresa" className="underline font-semibold">
 						aqui

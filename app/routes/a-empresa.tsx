@@ -16,11 +16,11 @@ export default function Empresa() {
 				</div>
 			</div>
 			<div className="mx-auto container max-w-5xl p-8">
-				<div className="flex items-start gap-8 ">
-					<div className="sticky top-20 w-1/2 rounded-2xl overflow-hidden">
+				<div className="md:flex items-start gap-8 ">
+					<div className="md:sticky top-20 md:w-1/2 rounded-2xl overflow-hidden">
 						<img src="equipe2.jpg" alt="" />
 					</div>
-					<div className="w-1/2">
+					<div className="md:w-1/2 mt-8 md:mt-0">
 						<p className="mb-8">
 							O tempo consolidou nosso trabalho e nossa imagem no
 							mercado. Acompanhando as principais tendências no
