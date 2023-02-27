@@ -3,7 +3,7 @@ export default function Empresa() {
 		<>
 			<div
 				className="min-h-[70vh] bg-top bg-cover grid place-items-center"
-				style={{ backgroundImage: "url(equipe.jpg)" }}
+				style={{ backgroundImage: "url(mandacaru.jpg)" }}
 			>
 				<div className="font-bold text-white text-[10vw] leading-none text-center px-8 py-16">
 					A Empresa
