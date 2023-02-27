@@ -213,11 +213,11 @@ function Contato() {
 						</h4>
 						<div className="text-sm">
 							<a
-								href="https://instagram.com/mandacaruemp"
+								href="https://www.instagram.com/mandacaruempreendimentos_/"
 								target="_blank"
 								rel="noreferrer"
 							>
-								@mandacaruemp
+								@mandacaruempreendimentos_
 							</a>
 						</div>
 					</div>
