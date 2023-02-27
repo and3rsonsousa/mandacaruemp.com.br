@@ -161,14 +161,13 @@ function Obras() {
 
 function Map() {
 	return (
-		<div className="mt-16">
+		<div className="mt-16 w-full overflow-x-hidden">
 			<div className="font-bold text-5xl text-center px-8 py-16">
 				Veja como é fácil nos encontrar
 			</div>
 			<iframe
 				title="Mapa"
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1539.2918149896334!2d-40.33160570954907!3d-3.705024656658863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7eac795167896fb%3A0xffb93e9b3deba2e3!2sMandacar%C3%BA%20Empreendimentos!5e0!3m2!1sen!2sbr!4v1677208513631!5m2!1sen!2sbr"
-				width="600"
 				height="450"
 				style={{ border: 0, width: "100vw" }}
 				allowFullScreen={false}

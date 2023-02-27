@@ -1,9 +1,14 @@
 export default function Fazemos() {
 	return (
-		<div className="h-[100vh] grid place-items-center	bg-brand-700">
-			<div className="text-center">
-				{/* <h2 className="text-5xl font-bold">Obras</h2> */}
-				<div className="text-brand-300">Disponível em breve.</div>
+		<div
+			className="min-h-[100vh] bg-top bg-cover grid place-items-center"
+			style={{ backgroundImage: "url(fazemos.jpg)" }}
+		>
+			<div className="text-center px-8 py-16 text-white">
+				<div className="font-bold  text-[10vw] leading-none">
+					O que fazemos
+				</div>
+				<div>EM BREVE</div>
 			</div>
 		</div>
 	);

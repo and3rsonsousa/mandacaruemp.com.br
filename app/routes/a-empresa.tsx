@@ -2,11 +2,14 @@ export default function Empresa() {
 	return (
 		<>
 			<div
-				className="min-h-[70vh] bg-center bg-cover"
+				className="min-h-[70vh] bg-top bg-cover grid place-items-center"
 				style={{ backgroundImage: "url(equipe.jpg)" }}
-			></div>
+			>
+				<div className="font-bold text-white text-[10vw] leading-none text-center px-8 py-16">
+					A Empresa
+				</div>
+			</div>
 			<div className="max-w-lg text-center mx-auto p-8">
-				<div className="text-5xl font-bold mb-8">A Empresa</div>
 				<div className="text-2xl font-light">
 					Sempre com a preocupação de fazer com qualidade e cumprir
 					prazos de entrega, desde sua fundação.
@@ -14,7 +17,7 @@ export default function Empresa() {
 			</div>
 			<div className="mx-auto container max-w-5xl p-8">
 				<div className="flex items-start gap-8 ">
-					<div className="sticky top-20 w-1/2">
+					<div className="sticky top-20 w-1/2 rounded-2xl overflow-hidden">
 						<img src="equipe2.jpg" alt="" />
 					</div>
 					<div className="w-1/2">

@@ -7,7 +7,7 @@ body {
 }
 
 .header {
-	@apply transition-all duration-500;
+	@apply transition-all duration-500 bg-gradient-to-b from-brand;
 }
 
 .header.short {
